@@ -13,7 +13,7 @@ Preprequisites
 Install
 ===
 
-#### 1. Add this to your `.zshrc`
+#### 1. Add this to your `~/.zshrc`
 
 ```
 # zsh Function to call sfdx force:org:open command
