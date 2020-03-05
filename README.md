@@ -3,7 +3,7 @@ Alias and tab completion to open Salesforce orgs from the command line in zsh
 ==
 
 
-Preprequisites:
+Preprequisites
 ===
 
 - Z-shell (default on macOS from Catalina)
@@ -13,7 +13,7 @@ Preprequisites:
 Install
 ===
 
-####1. Add this to your `.zshrc`
+#### 1. Add this to your `.zshrc`
 
 ```
 # zsh Function to call sfdx force:org:open command
@@ -39,9 +39,9 @@ fpath=(~/.zsh $fpath)
 
 ```
 
-####2. Save the [`_sfopen`](.zsh/_sfopen) completion file somewhere in your path (.zsh/ directory in the example above)
+#### 2. Save the [`_sfopen`](.zsh/_sfopen) completion file somewhere in your path (.zsh/ directory in the example above)
 
-####4. Restart zsh
+#### 3. Restart zsh
 ```
 zsh -l
 
