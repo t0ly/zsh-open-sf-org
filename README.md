@@ -18,16 +18,19 @@ Install
 ```
 # zsh Function to call sfdx force:org:open command
 sfopen () {
-if (( $# == 0 ))
-        then grep "\": \"" ~/.sfdx/alias.json |  cut -s -d\" -f2 | sort && echo \\nUsage: sfopen myorgname\\nTab key completes org alias;
-fi
+        if (( $# == 0 ))
+                then grep "\": \"" ~/.sfdx/alias.json |  cut -s -d\" -f2 | sort && echo \\nUsage: sfopen myorgname\\nTab key completes org alias;
+        fi
+        
         for i; do
-        date && sfdx force:org:open -p /setup/forcecomHomepage.apexp -u $i;
+                #Datestamp to help with your timesheet
+                #Opens setup in classic. Other option -p /lightning/setup
+                date && sfdx force:org:open -p /setup/forcecomHomepage.apexp -u $i;
         done
 }
 
-autoload _sfopen                # do not forget BEFORE the next cmd!
-compdef _sfopen sfopen  # binds the completion function to a command
+autoload _sfopen    
+compdef _sfopen sfopen  
 
 # enable the default zsh completions!
 autoload -Uz compinit && compinit
