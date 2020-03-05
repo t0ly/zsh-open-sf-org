@@ -1,0 +1,2 @@
+#compdef sfopen
+_arguments "1: :($(  grep "\": \"" ~/.sfdx/alias.json |  cut -s -d\" -f2 | sort  ))"
