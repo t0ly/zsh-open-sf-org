@@ -24,8 +24,9 @@ sfopen () {
         
         for i; do
                 #Datestamp to help with your timesheet
-                #Opens setup in classic. Other option -p /lightning/setup
-                date && sfdx force:org:open -p /setup/forcecomHomepage.apexp -u $i;
+                date && 
+		#Opens setup in classic. Other option -p /lightning/setup
+                sfdx force:org:open -p /setup/forcecomHomepage.apexp -u $i;
         done
 }
 
